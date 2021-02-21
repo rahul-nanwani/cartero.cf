@@ -1,1 +1,0 @@
-var i = 0;var txt = 'Cartero';function typeWriter() {if (i < txt.length) {document.getElementById("landing").innerHTML += txt.charAt(i);i++;setTimeout(typeWriter, 100);}}ScrollReveal({ reset: true });typeWriter();ScrollReveal().reveal('#cartero');ScrollReveal().reveal('#features');
