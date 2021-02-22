@@ -1,5 +1,6 @@
 *{font-family: 'Poppins', sans-serif;}
 body{background-color: #000; color: #fff;}
+a{text-decoration: none;color: #51A0D5;transition: 230ms;}a:hover{color: #0275d8;}
 section{padding-top: 60px;}
 h2{font-variant: small-caps; color: #0275d8; text-align: center;}
 h3{font-variant: small-caps;}
