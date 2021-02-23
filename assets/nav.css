@@ -4,5 +4,5 @@ nav{background-color: #000; opacity: 0.9; color: #fff;}
 .nav-link{color: #fff;transition: 230ms;}.nav-link:hover{color: #51A0D5;}
 .nav-offset{margin-right: 40px;}
 .dropdown-menu{background-color: #000; opacity: 0.9; color: #fff;}
-.dropdown-item{color: #fff;}.dropdown-item:hover{background-color: #51A0D5;}
+.dropdown-item{color: #fff; transition: 230ms;}.dropdown-item:hover{background-color: #535150; color: #fff;}
 .toggler-btn{color: #fff;}
