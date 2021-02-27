@@ -78,8 +78,9 @@
                 <li>
                     <h4>blackjack</h4>
                     <p>
-                        ・Aliases: bj<br>・Syntax: <code>?blackjack [bet] {opponent}</code><br>・You can bet from $ 100 to
-                        $ 100,000<br>・You can either let your friend deal the cards or let Cartero pick a dealer.
+                        ・Aliases: bj<br>・Syntax: <code>C.blackjack [bet] {opponent}</code><br>・Cooldown: 15 seconds<br>
+                        ・You can bet from $ 100 to $ 100,000<br>・You can either let your friend deal the cards or let
+                        Cartero pick a dealer.
                     </p>
                     <p>
                         How to play blackjack?<br>
@@ -95,40 +96,40 @@
                 <li>
                     <h4>profile</h4>
                     <p>
-                        ・Aliases: record, p<br>・Syntax: <code>?profile {user}</code><br>・See the player records and
+                        ・Aliases: record, p<br>・Syntax: <code>C.profile {user}</code><br>・See the player records and
                         balance.
                     </p>
                 </li>
                 <li>
                     <h4>balance</h4>
                     <p>
-                        ・Aliases: bal<br>・Syntax: <code>?balance {user}</code><br>・See the player balance.
+                        ・Aliases: bal<br>・Syntax: <code>C.balance {user}</code><br>・See the player balance.
                     </p>
                 </li>
                 <li>
                     <h4>beg</h4>
                     <p>
-                        ・Syntax: <code>?beg</code><br>・Cooldown: 60 seconds<br>・The only way to generate quick money is
+                        ・Syntax: <code>C.beg</code><br>・Cooldown: 60 seconds<br>・The only way to generate quick money is
                         to beg some celebs, but you need some luck too.
                     </p>
                 </li>
                 <li>
                     <h4>daily</h4>
                     <p>
-                        ・Syntax: <code>?daily</code><br>・Using this you can get anything from $ 200 to $ 300 daily.
+                        ・Syntax: <code>C.daily</code><br>・Using this you can get anything from $ 200 to $ 300 daily.
                     </p>
                 </li>
                 <li>
                     <h4>monthly</h4>
                     <p>
-                        ・Syntax: <code>?monthly</code><br>・Using this you can get anything from $ 10000 to $ 12000
+                        ・Syntax: <code>C.monthly</code><br>・Using this you can get anything from $ 10000 to $ 12000
                         monthly.
                     </p>
                 </li>
                 <li>
                     <h4>transfer</h4>
                     <p>
-                        ・Aliases: give, send<br>・Syntax: <code>?transfer [user] [amount]</code><br>・Transfer money to a
+                        ・Aliases: give, send<br>・Syntax: <code>C.transfer [user] [amount]</code><br>・Transfer money to a
                         user.
                     </p>
                 </li>
@@ -140,34 +141,34 @@
                 <li>
                     <h4>purge</h4>
                     <p>
-                        ・Aliases: clear<br>・Syntax: <code>?purge [amount (Default: 1)]</code><br>・Requires Manage
+                        ・Aliases: clear<br>・Syntax: <code>C.purge [amount (Default: 1)]</code><br>・Requires Manage
                         Messages permission.<br>・Used to purge messages in a text channel.
                     </p>
                 </li>
                 <li>
                     <h4>mute</h4>
-                    <p>・Syntax: <code>?mute [user] [reason (Default: None)]</code><br>・Requires Manage Messages
+                    <p>・Syntax: <code>C.mute [user] {reason (Default: None)}</code><br>・Requires Manage Messages
                         permission.<br>・Assigns 'Muted' role and sends a message with the reason to the mentioned user.
                     </p>
                 </li>
                 <li>
                     <h4>unmute</h4>
-                    <p>・Syntax: <code>?unmute [user]</code><br>・Requires Manage Messages permission.<br>・Removes 'Muted'
+                    <p>・Syntax: <code>C.unmute [user]</code><br>・Requires Manage Messages permission.<br>・Removes 'Muted'
                         role and sends a message to the mentioned user.</p>
                 </li>
                 <li>
                     <h4>kick</h4>
-                    <p>・Syntax: <code>?kick [user] [reason (Default: None)]</code><br>・Requires Kick Members
+                    <p>・Syntax: <code>C.kick [user] {reason (Default: None)}</code><br>・Requires Kick Members
                         permission.<br>・Kicks the mentioned user.</p>
                 </li>
                 <li>
                     <h4>ban</h4>
-                    <p>・Syntax: <code>?ban [user] [reason (Default: None)]</code><br>・Requires Ban Members
+                    <p>・Syntax: <code>C.ban [user] {reason (Default: None)}</code><br>・Requires Ban Members
                         permission.<br>・Bans the mentioned user.</p>
                 </li>
                 <li>
                     <h4>unban</h4>
-                    <p>・Syntax: <code></code>?unban [user] [reason (Default: None)]</code><br>・Requires Ban Members
+                    <p>・Syntax: <code>C.unban [user] {reason (Default: None)}</code><br>・Requires Ban Members
                         permission.<br>・Unbans the mentioned user.</p>
                 </li>
             </ul>
@@ -177,15 +178,22 @@
             <ul>
                 <li>
                     <h4>dm</h4>
-                    <p>・Aliases: pm, mail<br>・Syntax: <code>?dm [user] [message (Default: None)]</code><br>・Requires
+                    <p>・Aliases: pm, mail<br>・Syntax: <code>C.dm [user] [message]</code><br>・Requires
                         Administrator permission.<br>・Sends the message to the mentioned user on the behalf of the
                         server.</p>
                 </li>
                 <li>
-                    <h4>setcartero</h4>
+                    <h4>set prefix</h4>
                     <p>
-                        ・Syntax: <code>[current prefix]setcartero [new prefix]</code><br>・Requires Administrator
+                        ・Syntax: <code>[current prefix]set prefix [new prefix]</code><br>・Requires Administrator
                         permission.<br>・Changes the server prefix for Cartero.
+                    </p>
+                </li>
+                <li>
+                    <h4>set default</h4>
+                    <p>
+                        ・Syntax: <code>[current prefix]set default</code><br>・Requires Administrator
+                        permission.<br>・Resets the server prefix for Cartero.
                     </p>
                 </li>
             </ul>
