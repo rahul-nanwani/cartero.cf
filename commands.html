@@ -57,10 +57,10 @@
                                 Commands
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#blackjack">Blackjack Commands</a></li>
+                                <li><a class="dropdown-item" href="#fun">Fun Commands</a></li>
+                                <li><a class="dropdown-item" href="#economy">Economy Commands</a></li>
                                 <li><a class="dropdown-item" href="#moderation">Moderation Commands</a></li>
-                                <li><a class="dropdown-item" href="#admin">Administrator Commands</a></li>
-                                <li><a class="dropdown-item" href="#misc">Miscellaneous Commands</a></li>
+                                <li><a class="dropdown-item" href="#utility">Utility Commands</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -72,8 +72,8 @@
 
     <section id="commands">
         <h2>Commands List</h2>
-        <div id="blackjack" class="container my-4">
-            <h3>Blackjack Commands</h3>
+        <div id="fun" class="container my-4">
+            <h3>Fun Commands</h3>
             <ul>
                 <li>
                     <h4>blackjack</h4>
@@ -94,6 +94,33 @@
                     </p>
                 </li>
                 <li>
+                    <h4>8ball</h4>
+                    <p>
+                        ・Aliases: 8<br>・Syntax: <code>C.8ball [question]</code><br>・Chooses a random answer from a ball
+                        with 10 affirmative, 5 non-committal, and 5 negative answers .
+                    </p>
+                </li>
+                <li>
+                    <h4>choose</h4>
+                    <p>
+                        ・Aliases: choice, c<br>・Syntax: <code>C.choose [option A] [option B]</code><br>・Choose between
+                        option A and option B.
+                    </p>
+                </li>
+                <li>
+                    <h4>roast</h4>
+                    <p>
+                        ・Syntax: <code>C.roast [user]</code><br>・Roast the mentioned user.
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="economy" class="container my-auto">
+            <h3>Economy Commands</h3>
+            <ul>
+                <li>
                     <h4>profile</h4>
                     <p>
                         ・Aliases: record, p<br>・Syntax: <code>C.profile {user}</code><br>・See the player records and
@@ -106,6 +133,14 @@
                         ・Aliases: bal<br>・Syntax: <code>C.balance {user}</code><br>・See the player balance.
                     </p>
                 </li>
+                <li>
+                    <h4>transfer</h4>
+                    <p>
+                        ・Aliases: give, send<br>・Syntax: <code>C.transfer [user] [amount]</code><br>・Transfer money to a
+                        user.
+                    </p>
+                </li>
+
                 <li>
                     <h4>beg</h4>
                     <p>
@@ -126,13 +161,7 @@
                         monthly.
                     </p>
                 </li>
-                <li>
-                    <h4>transfer</h4>
-                    <p>
-                        ・Aliases: give, send<br>・Syntax: <code>C.transfer [user] [amount]</code><br>・Transfer money to a
-                        user.
-                    </p>
-                </li>
+
                 <li>
                     <h4>rich</h4>
                     <p>
@@ -149,6 +178,7 @@
                 </li>
             </ul>
         </div>
+
         <div id="moderation" class="container my-auto">
             <h3>Moderation Commands</h3>
             <ul>
@@ -160,6 +190,20 @@
                     </p>
                 </li>
                 <li>
+                    <h4>add emoji</h4>
+                    <p>
+                        ・Syntax: <code>C.add emoji [emoji] {name}</code><br>・Requires Manage Emojis permission.<br>・Used
+                        to add emojis to the server.
+                    </p>
+                </li>
+                <li>
+                    <h4>delete emoji</h4>
+                    <p>
+                        ・Syntax: <code>C.delete emoji [emoji]</code><br>・Requires Manage Emojis permission.<br>・Used to
+                        delete emojis from the server.
+                    </p>
+                </li>
+                <li>
                     <h4>massmove</h4>
                     <p>
                         ・Aliases: mm<br>・Syntax: <code>C.massmove [current channel id] [new channel id]</code><br>
@@ -167,6 +211,7 @@
                         voice channel.
                     </p>
                 </li>
+
                 <li>
                     <h4>mute</h4>
                     <p>・Syntax: <code>C.mute [user] {reason (Default: None)}</code><br>・Requires Manage Messages
@@ -194,11 +239,7 @@
                     <p>・Syntax: <code>C.unban [user] {reason (Default: None)}</code><br>・Requires Ban Members
                         permission.<br>・Unbans the mentioned user.</p>
                 </li>
-            </ul>
-        </div>
-        <div id="admin" class="container my-auto">
-            <h3>Administrator Only Commands</h3>
-            <ul><li>
+                <li>
                     <h4>set prefix</h4>
                     <p>
                         ・Syntax: <code>[current prefix]set prefix [new prefix]</code><br>・Requires Administrator
@@ -212,11 +253,20 @@
                         permission.<br>・Resets the server prefix for Cartero.
                     </p>
                 </li>
+                <li>
+                    <h4>toggle anonymous</h4>
+                    <p>
+                        ・Aliases: toggle anon<br>・Syntax: <code>C.toggle anonymous</code><br>・Only owner can use the
+                        command.<br>・Toggle between anonymous owner displayed in <code>C.guildinfo</code>
+                    </p>
+                </li>
             </ul>
         </div>
-        <div id="misc" class="container my-auto">
-            <h3>Miscellaneous Commands</h3>
+
+        <div id="utility" class="container my-auto">
+            <h3>Utility Commands</h3>
             <ul>
+
                 <li>
                     <h4>poll</h4>
                     <p>
@@ -229,6 +279,25 @@
                     <p>
                         ・Aliases: av<br>・Syntax: <code>C.avatar {user}</code><br>・Shows the avatar of the mentioned
                         user, shows message author's avatar if not mentioned.
+                    </p>
+                </li>
+
+                <li>
+                    <h4>info</h4>
+                    <p>
+                        ・Syntax: <code>C.info {user}</code><br>・Shows information of the user.
+                    </p>
+                </li>
+                <li>
+                    <h4>guildinfo</h4>
+                    <p>
+                        ・Aliases: serverinfo<br>・Syntax: <code>C.guildinfo</code><br>・Shows information of the server.
+                    </p>
+                </li>
+                <li>
+                    <h4>botinfo</h4>
+                    <p>
+                        ・Syntax: <code>C.botinfo</code><br>・Shows information of the bot.
                     </p>
                 </li>
                 <li>
@@ -250,7 +319,9 @@
                         <i class="fas fa-envelope"></i> support@cartero.cf</a>
                 </div>
                 <div class="col-lg-6 col-md-6 my-2">
-                    <span>Copyright © <a class="footer-link" href="#">Rahul Nanwani</a>, 2021.</span>
+                    <span>Copyright © <a class="footer-link" href="https://rahulnanwani.tk/">Rahul Nanwani</a>,
+                        <script>document.write(new Date().getFullYear())</script>.
+                    </span>
                 </div>
             </div>
         </div>
